@@ -1,0 +1,375 @@
+@charset "UTF-8";
+
+
+/* Reset */
+* {
+    color: #333;
+    background-color: #fff;
+    padding: 0;
+    margin: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:link {
+    color: #222;
+}
+
+a:visited {
+    color: #222;
+}
+
+a:hover {
+    color: #333;
+}
+
+a:active {
+    color: #333;
+}
+
+img {
+    vertical-align: middle;
+}
+
+ul {
+    list-style: none;
+}
+
+/* Reset */
+
+/* 가이드 선 */
+/*
+div#wrap {border: 1px solid #000;}
+*/
+header#header {
+    border: 1px solid #aaa;
+}
+
+/*#header>nav#gnb>ul#mainMenu {border: 1px solid #000;}*/
+/*
+header#header #headerLogo a img {border: 1px solid #000;}
+*/
+main#main {
+    border: 1px solid #aaa;
+}
+
+footer#footer {
+    border: 1px solid #aaa;
+}
+
+/* 가이드 선 */
+
+
+/* div#wrap s */
+div#wrap {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+/* div#wrap e */
+
+/* header#header s */
+header#header {
+    width: 1200px;
+    height: 100px;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    justify-content: space-between;
+}
+
+#header #headerLogo {
+    line-height: 100px;
+    padding-left: 40px;
+}
+
+#header > nav#gnb > ul#mainMenu {
+    width: 650px;
+}
+
+#header > nav#gnb > ul#mainMenu > li {
+    margin-top: 20px;
+    float: left;
+}
+
+#header > nav#gnb > ul#mainMenu > li > a {
+    width: 150px;
+    padding: 10px;
+    font-size: 22px;
+    text-align: center;
+    display: inline-block;
+    border: 1px solid #aaa;
+}
+#header > nav#gnb > ul#mainMenu > li > a:hover {
+    color: #fff;
+    background-color: #2a54f3;
+}
+
+#header > nav#gnb ul#subMenu {
+    position: relative;
+    display: none;
+    z-index: 10;
+}
+
+#header > nav#gnb ul#subMenu > li {
+    text-align: center;
+}
+
+#header > nav#gnb ul#subMenu > li > a {
+    width: 150px;
+    line-height: 50px;
+    font-size: 20px;
+    display: inline-block;
+    border-left: 1px solid #aaa;
+}
+
+#header > nav#gnb ul#subMenu > li > a:last-child {
+    border-right: 1px solid #aaa;
+} /* 이부분도 한꺼번에 적용되고 이러네요 ㅠㅠ*/
+
+#header > nav#gnb ul#subMenu > li > a:hover {
+    color: #fff;
+    background-color: #2a54f3;
+}
+
+/* header#header e */
+/* main#main s */
+main#main {
+    width: 1200px;
+    height: 500px;
+}
+
+#main > #slideArea {
+    width: 1200px;
+    height: 300px;
+    position: relative;
+    overflow: hidden;
+}
+
+#main > #slideArea a {
+    position: absolute;
+}
+
+#slideArea a:not(:first-child) {
+    display: none;
+}
+
+#slideArea span {
+    width: 500px;
+    height: 100px;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 100px;
+    background-color: rgba(255, 255, 255, 0.8);
+
+    position: absolute;
+    left: 50%;
+    top: 42%;
+    transform: translate(-50%, -50%);
+
+    border-radius: 10px;
+
+}
+
+#slideArea > #shuttleFrame {
+    width: 1200px;
+}
+
+main#main > #content {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+}
+
+#main > #content > #tabArea {
+    width: 400px;
+    height: 199px;
+    padding: 10px;
+}
+
+#main > #content > #tabArea button {
+    font-size: 18px;
+    font-weight: bold;
+    padding: 2px 6px;
+    border: 1px solid #aaa;
+    border-bottom: none;
+    position: relative;
+
+}
+
+button:first-child {
+    margin-left: 25px;
+    top: 1px;
+}
+
+button:nth-child(2) {
+    border: none;
+    left: -6px;
+    top: 1;
+}
+
+div#tabArea > div {
+    padding: 15px 10px;
+    border: 1px solid #aaa;
+
+    display: inline-block;
+}
+
+#tabArea #tabContent1 #bbsNotice li:first-child span {
+    /*border: 1px solid #000;*/
+
+    cursor: pointer;
+}
+
+#tabArea #tabContent1 {
+    padding: 10px 26px 10px 25px;
+}
+
+#tabArea #tabContent1 #bbsNotice li {
+    line-height: 32px;
+}
+
+#tabArea #tabContent1 #bbsNotice span:first-child {
+    width: 239px;
+    display: inline-block;
+}
+
+#tabArea #tabContent2 {
+    width: 379px;
+    text-align: center;
+    height: 150px;
+    line-height: 110px;
+
+    display: none;
+}
+
+div#modalLayerBG {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.0);
+
+    display: none;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+/* 배경 레이어 끝 */
+/* 팝업 레이어 시작 */
+div#modalPopup {
+    min-width: 650px;
+    padding: 30px;
+    border: 1px solid #000;
+    background-color: #fff;
+
+    position: absolute;
+    left: 50%;
+    top: 50%;
+
+    transform: translate(-50%, -50%)
+}
+
+#modalPopup ul {
+    line-height: 24px;
+    margin: 20px 10px;
+    list-style-position: inside;
+}
+
+#modalPopup button#closeBtn {
+    font-size: 18px;
+    width: 50px;
+    height: 40px;
+    border: 1px solid #aaa;
+
+    cursor: pointer;
+
+    position: absolute;
+    right: 15px;
+    top: 76%;
+}
+
+/* 팝업 레이어 끝 */
+
+#main > #content > #banner {
+    width: 400px;
+    height: 199px;
+    text-align: center;
+    line-height: 193px;
+}
+
+#main > #content > #shotcut {
+    width: 400px;
+    height: 199px;
+    text-align: center;
+    line-height: 193px;
+}
+
+/* main#main e */
+
+/* footer#footer s */
+footer#footer {
+    width: 1200px;
+    height: 100px;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+}
+
+#footer > #footerLogo {
+    padding-left: 50px;
+    line-height: 100px;
+}
+
+#footer > #footergnb {
+    width: 990px;
+    text-align: center;
+}
+
+#footer > #footergnb > #lnb {
+    height: 50px;
+}
+
+#footer > #footergnb ul {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+
+    justify-content: center;
+}
+
+#footer > #footergnb ul > li {
+    padding: 10px;
+    text-align: center;
+}
+
+#footer > #footergnb ul > li a {
+    margin-top: 5px;
+    display: inline-block;
+}
+
+#footer > #footergnb #copy {
+    margin-top: 5px;
+    display: inline-block;
+}
+/* footer#footer e */
+
+/* IE9 버전 이하의 예전버전에서 실행되기 위한 소스 */
+header, nav, footer, section,
+main, article, aside {
+    display: block;
+}
